@@ -126,7 +126,7 @@ namespace moviesCore5CRUD.Controllers
         public IActionResult Delete(int? id)
         {
             var move = _context.movies.Find(id);
-            if (id == null)
+            if (id != null)
             {
                 return BadRequest();
             }
